@@ -16,6 +16,32 @@ Or install it yourself as:
 
     $ gem install parade-liveruby
 
+## Usage
+
+Require it in your `parade` file:
+
+```ruby
+require 'parade-liveruby'
+
+title "Example Presentation"
+
+description "My Awesome Presentation"
+
+section "Introduction" do
+  slides "intro.md"
+  slides "installation.md"
+  slides "navigation.md"
+end
+```
+
+Require it in your `config.ru` file:
+
+```ruby
+require "parade"
+require "parade-liveruby"
+run Parade::Server.new
+```
+
 ## Contributing
 
 1. Fork it
